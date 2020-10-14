@@ -20,7 +20,7 @@ class CreateEmployeesTable extends Migration
             $table->integer('type_id');
             $table->integer('department_id');
             $table->integer('site_id');
-            $table->date('birthdate');
+            $table->string('birthdate');
             $table->timestamps();
         });
     }
