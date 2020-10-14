@@ -17,9 +17,9 @@ class CreateEmployeesTable extends Migration
             $table->increments('id');
             $table->string('emp_num');
             $table->string('name');
-            $table->integer('type_id');
-            $table->integer('department_id');
-            $table->integer('site_id');
+            $table->integer('type_id')->nullable();
+            $table->integer('department_id')->nullable();
+            $table->integer('site_id')->nullable();
             $table->string('birthdate');
             $table->timestamps();
         });
