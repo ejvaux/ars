@@ -15,10 +15,13 @@ class CreateResultRecordsTable extends Migration
     {
         Schema::create('result_records', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('test_id');
-            $table->integer('employee_id');
-            $table->integer('result_id');
-            $table->integer('user_id');
+            $table->integer('test_id')->nullable();
+            $table->string('employee_num');
+            $table->integer('employee_id')->nullable();
+            $table->integer('result_id')->nullable();
+            $table->integer('user_id')->nullable();
+            $table->dateTime('in_at');
+            $table->dateTime('out_at')->nullable();
             $table->timestamps();
         });
     }
