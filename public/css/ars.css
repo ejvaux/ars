@@ -1,0 +1,17 @@
+.container{
+    margin:50px;
+    border: 3px solid black;
+    padding: 40px 0px;   
+}
+#resultRecord{
+    display: none;
+}
+button{
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: #008ae6;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
