@@ -1,17 +1,32 @@
-.container{
-    margin:50px;
-    border: 3px solid black;
-    padding: 40px 0px;   
+
+/* .full-height {
+    height: 100vh;
 }
-#resultRecord{
-    display: none;
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
-button{
-    height: 40px;
-    width: 120px;
-    color: white;
-    background-color: #008ae6;
-    border-radius: 8px;
-    box-shadow: none;
+
+.position-ref {
+    position: relative; 
+}*/
+h2{
+    color:green;
+    margin-bottom: 10px;
+    border-bottom: 5px solid green;
 }
+input{
+    height: calc(1.6em + 0.75rem + 2px);
+}
+ .row, label{
+    margin: 15px 3px;
+} 
+.title{
+    font-size: 64px;
+}
+.title2{
+    font-size: 32px;
+} 
 

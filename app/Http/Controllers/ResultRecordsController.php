@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\result_records;
+use App\Result_records;
+use App\Test_records;
 use Illuminate\Http\Request;
 
 class ResultRecordsController extends Controller
@@ -35,7 +36,7 @@ class ResultRecordsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
@@ -67,9 +68,20 @@ class ResultRecordsController extends Controller
      * @param  \App\result_records  $result_records
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, result_records $result_records)
+    public function update(Request $request)
     {
-        //
+        Result_records::where("emp_num", "emp_id")
+        ->where("out_at",NULL)
+        ->update([
+            'test_id' => $request->test_id ,
+            'employee_id' => $request->emp_id , 
+            'result_id' => 4,
+            'user_id' => $request->test_id,
+            'out_at' => now(), 
+
+        ]);
+
+        return 'success';
     }
 
     /**

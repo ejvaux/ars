@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\test_records;
+use App\Test_classifications;
+use App\Test_types;
 use Illuminate\Http\Request;
 
 class TestRecordsController extends Controller
@@ -14,7 +16,11 @@ class TestRecordsController extends Controller
      */
     public function index()
     {
-        //
+        $classes = test_classifications::all();
+        $types = test_types::all();
+        $tests= test_records::all();
+
+        return view('ars_homepage.homeTab',compact('classes','types','tests' ));
     }
 
     /**

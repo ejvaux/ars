@@ -22,9 +22,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('/homepage', 'RecordController@index')->name('homepage');
+// Route::get('/homepage', 'RecordController@index')->name('homepage');
 
 
 Route::resources([
     'testrecord' => 'TestRecordController',
+    'resultrecord' => 'ResultRecordsController',
+    'updaterecord' => 'RecordController',
 ]);
+
+Route::post ('/rrecord', 'ResultRecordsController@update');
+
+// 'updaterecord' => 'ResultRecordsController',

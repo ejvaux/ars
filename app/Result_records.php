@@ -3,6 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Test_records;
+use App\User;
+use App\Employees;
+use App\Results;
 
 class Result_records extends Model
 {

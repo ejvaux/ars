@@ -125,9 +125,7 @@
         </div>
     </body>
 </html>
-<footer style="position:absolute; width:100%; margin:0px">
-        @include('includes.footer')
-</footer>
+
 
 
 

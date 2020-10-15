@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Test_records;
 
 class TestRecordController extends Controller
 {
@@ -41,7 +42,7 @@ class TestRecordController extends Controller
             'provider' => 'required|string'
         ]);
 
-        $request = new test_record;
+        $request = new Test_records;
 
         $request->test_code = $req->test_code;
         $request->type_id = $req->test_type;
