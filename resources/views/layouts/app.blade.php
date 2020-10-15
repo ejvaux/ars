@@ -44,11 +44,11 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>                            
                         @else
-                            @if (Auth::user()->role == 'admin')
+                            {{-- @if (Auth::user()->role == 'admin')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Add User') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                             {{-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -60,6 +60,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if (Auth::user()->role == 'admin')
+                                        <a class="dropdown-item" href="{{ route('register') }}">{{ __('Add User') }}</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
