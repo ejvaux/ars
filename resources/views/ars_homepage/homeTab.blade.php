@@ -101,7 +101,7 @@
                     <label for="ttype">Employee ID : </label>
                 </div>
                 <div class="col-md-6">  
-                    <input type="text" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="emp_id" name="emp_id" placeholder=" Scan QR code here.."><br>
+                    <input type="text" autocomplete="off" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="emp_id" name="emp_id" placeholder=" Scan QR code here.."><br>
                 </div>&nbsp;
             </div>
 

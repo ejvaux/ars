@@ -72,7 +72,9 @@ class RecordController extends Controller
      */
     public function update(Request $request)
     {
-        $id = $request->empl_id;
+        $str = explode(";",$request->empl_id);
+        $id = $str[1];
+
         $test = $request->tests_id;
         $employee_id = Employees::where('emp_num', $id)->first();
 

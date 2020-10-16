@@ -27,7 +27,7 @@
                     <label for="ttype">Employee ID : </label>
                 </div>
                 <div class="col-md-6">  
-                    <input type="text" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="empl_id" name="empl_id" placeholder=" Scan QR code here.."><br>
+                    <input type="text" autocomplete="off" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="empl_id" name="empl_id" placeholder=" Scan QR code here.."><br>
                 </div>&nbsp;
             </div>
 
@@ -36,7 +36,7 @@
                     <label for="provider">Result : </label>
                 </div>
                 <div class="col-md-6">  
-                    <input type="text" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="results_id" name="results_id" placeholder=" Scan Result here.."><br>
+                    <input type="text" autocomplete="off" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="results_id" name="results_id" placeholder=" Scan Result here.."><br>
                 </div>
             </div>
             <div class="row">
