@@ -9,6 +9,7 @@
 
     <script src="{{ asset('js\testrecord.js') }} "defer></script>
     <script src="{{ asset('js\resultrecord.js') }}" defer></script>
+    <script src="{{ asset('js\update.js') }}" defer></script>
     <link href="{{ asset('css\ars.css') }}" rel="stylesheet">
 @endsection
 
@@ -17,7 +18,7 @@
 @section('content')
 
 
-        <div class="container" style="margin: 0px 50px; ">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card" style="width:100%; border:none;">
