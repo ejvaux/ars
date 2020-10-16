@@ -71,7 +71,8 @@ class ResultRecordsController extends Controller
      */
     public function update(Request $request)
     {
-        $id = $request->emp_id;
+        $str = explode(";", $request->emp_id);
+        $id = $str[1];
         $employee_id = Employees::where('emp_num', $id)->first();
         $records = Result_records::where('employee_num', $id)->where("out_at", NULL )->first();
         
@@ -104,7 +105,7 @@ class ResultRecordsController extends Controller
                 'out_at' => now()
                  ]);
             
-            return 'success'; */   2
+            return 'success'; */   
             // return json_encode($records);
 
         
