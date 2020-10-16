@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\result_records;
+use App\Result_records;
+use App\Test_records;
+use App\Employees;
 use Illuminate\Http\Request;
 
 class ResultRecordsController extends Controller
@@ -35,7 +37,7 @@ class ResultRecordsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
@@ -67,13 +69,45 @@ class ResultRecordsController extends Controller
      * @param  \App\result_records  $result_records
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, result_records $result_records)
+    public function update(Request $request)
     {
-        //
+        $id = $request->emp_id;
+        $employee_id = Employees::where('emp_num', $id)->pluck('id');
+        // $request->empt = $emp
+
+        // return $employee_id;
+        
+        
+       
+        $records = Result_records::where('employee_num', $id)
+            ->where("out_at", NULL )->first();
+            // ->update([
+            //     // 'test_id' => $request->test_id ,
+            //     // 'result_id' => 4,
+            //     // 'user_id' => $request->user_id,
+            //     // 'out_at' => now(),
+            //     'employee_id' => 3
+            //      ]);
+            
+            
+          
+
+        
+        $records->result_id = 3;
+        
+        $records->save();
+
+        return 'success';        
+
+        
+            // return json_encode($records);
+
+        
     }
 
     /**
      * Remove the specified resource from storage.
+     * 
      *
      * @param  \App\result_records  $result_records
      * @return \Illuminate\Http\Response

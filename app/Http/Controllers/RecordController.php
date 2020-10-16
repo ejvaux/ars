@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\test_records;
-use App\Test_classifications;
-use App\Test_types;
 use Illuminate\Http\Request;
 
-class TestRecordsController extends Controller
+class RecordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +13,7 @@ class TestRecordsController extends Controller
      */
     public function index()
     {
-        $classes = test_classifications::all();
-        $types = test_types::all();
-        $tests= test_records::all();
-
-        return view('ars_homepage.homeTab',compact('classes','types','tests' ));
+        return view('ars_homepage/homepage');
     }
 
     /**
@@ -41,16 +34,16 @@ class TestRecordsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\test_records  $test_records
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(test_records $test_records)
+    public function show($id)
     {
         //
     }
@@ -58,10 +51,10 @@ class TestRecordsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\test_records  $test_records
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(test_records $test_records)
+    public function edit($id)
     {
         //
     }
@@ -70,10 +63,10 @@ class TestRecordsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\test_records  $test_records
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, test_records $test_records)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -81,10 +74,10 @@ class TestRecordsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\test_records  $test_records
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(test_records $test_records)
+    public function destroy($id)
     {
         //
     }

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Test_classifications;
+use App\Test_types;
+use App\Test_records;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $classes = test_classifications::all();
+        $types = test_types::all();
+        $tests = test_records::orderByDesc('id')->take(5)->get();
+
+        return view('home',compact('classes','types','tests' ));
     }
 }

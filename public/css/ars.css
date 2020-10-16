@@ -1,0 +1,32 @@
+
+/* .full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative; 
+}*/
+h2{
+    color:green;
+    margin-bottom: 10px;
+    border-bottom: 5px solid green;
+}
+input{
+    height: calc(1.6em + 0.75rem + 2px);
+}
+ .row, label{
+    margin: 15px 3px;
+} 
+.title{
+    font-size: 64px;
+}
+.title2{
+    font-size: 32px;
+} 
+

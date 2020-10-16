@@ -3,6 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Test_types;
+use App\Departments;
+use App\Site;
 
 class Employees extends Model
 {

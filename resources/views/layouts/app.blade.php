@@ -7,10 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Anti-bodies Record System</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @yield('js')
+    
 </head>
 <body>
     <div id="app">
@@ -83,6 +87,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer style="position:absolute; width:100%; margin:0px; margin-top:0px;">
+                @include('includes.footer')
+        </footer>
     </div>
 </body>
 </html>

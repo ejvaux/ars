@@ -19,3 +19,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+// Route::get('/homepage', 'RecordController@index')->name('homepage');
+
+
+Route::resources([
+    'testrecord' => 'TestRecordController',
+    'resultrecord' => 'ResultRecordsController',
+    'updaterecord' => 'RecordController',
+]);
+
+Route::post ('/rrecord', 'ResultRecordsController@update');
+Route::post ('/urecord', 'RecordController@update');
+
+// 'updaterecord' => 'ResultRecordsController',
