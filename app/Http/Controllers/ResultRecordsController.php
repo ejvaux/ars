@@ -72,34 +72,39 @@ class ResultRecordsController extends Controller
     public function update(Request $request)
     {
         $id = $request->emp_id;
-        $employee_id = Employees::where('emp_num', $id)->pluck('id');
-        // $request->empt = $emp
+        $employee_id = Employees::where('emp_num', $id)->first();
+        $records = Result_records::where('employee_num', $id)->where("out_at", NULL )->first();
+        
 
-        // return $employee_id;
-        
-        
-       
-        $records = Result_records::where('employee_num', $id)
-            ->where("out_at", NULL )->first();
-            // ->update([
-            //     // 'test_id' => $request->test_id ,
-            //     // 'result_id' => 4,
-            //     // 'user_id' => $request->user_id,
-            //     // 'out_at' => now(),
-            //     'employee_id' => 3
-            //      ]);
+        try {
+            if($records){
+                $records->test_id = $request->test_id;
+                $records->employee_id = $employee_id->id;
+                $records->result_id = 4;
+                $records->user_id = $request->user_id;
+                $records->out_at = now();
+                $records->save();
+
+                 return 'Data successfully saved!';
+           }
+           else{
+                return 'Record not found!';
+           }
             
+
+        } catch (\Throwable $th) {
+            return $th;
+        }
+        
+            /* ->update([
+                'test_id' => $request->test_id ,
+                'employee_id' => $employee_id->id,
+                'result_id' => 4,
+                'user_id' => $request->user_id,
+                'out_at' => now()
+                 ]);
             
-          
-
-        
-        $records->result_id = 3;
-        
-        $records->save();
-
-        return 'success';        
-
-        
+            return 'success'; */   2
             // return json_encode($records);
 
         

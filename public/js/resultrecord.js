@@ -3,9 +3,7 @@ $("#resultRecSubmitBtn").on("click", function(e) {
     if($('#emp_id').val().length == 0){
         alert('Please complete the form')
     }  
-    // else if($('#result_id').val().length == 0){
-    //     alert('Please enter result on form')
-    // }  
+    
     else{
         e.preventDefault();
 
@@ -16,19 +14,22 @@ $("#resultRecSubmitBtn").on("click", function(e) {
             method:"POST",
             data: formdata,
             success: function (data) {
-                alert(data);
+                $("#resultRecordForm")[0].reset()
+                alert(data)
 
             },
-            error:function(error){
-                alert("Cant find the Employee ID");
-            }
+            // error:function(error){
+            //     alert("Cant find the Employee ID");
+            // }
         });
     }
     
 });
 
 
-
+// else if($('#result_id').val().length == 0){
+    //     alert('Please enter result on form')
+    // }  
 
 // $("#resultRecordForm")[0].reset()
                 // if(data=='success'){

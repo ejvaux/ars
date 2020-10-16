@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Result_records;
+use App\Test_records;
+use App\Employees;
 use Illuminate\Http\Request;
+
 
 class RecordController extends Controller
 {
@@ -66,11 +70,35 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->empl_id;
+        $test = $request->tests_id;
+        $employee_id = Employees::where('emp_num', $id)->first();
+
+        $records = Result_records::where('test_id', $test)->where('employee_num', $id)->first();
+
+        try{
+            if($records){ 
+                $records->result_id = $request->results_id;
+                $records->save();
+
+                return 'Data successfully updated!';
+            }
+            else{
+                return 'Record not found!';
+            }
+        } catch (\Throwable $th) {
+            return $th;
+        }
+        
     }
 
+
+
+    // ->update([
+    //     'result_id' => $request->results_id
+    //      ]);
     /**
      * Remove the specified resource from storage.
      *
@@ -81,4 +109,6 @@ class RecordController extends Controller
     {
         //
     }
+
+    
 }
