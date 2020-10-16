@@ -105,14 +105,14 @@
                 </div>&nbsp;
             </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-4">
                     <label for="provider">Result : </label>
                 </div>
                 <div class="col-md-6">  
                     <input type="text" style=" height: calc(1.6em + 0.75rem + 2px); border:1px solid black; width:100%;" id="result_id" name="result_id" placeholder=" Scan Result here.."><br>
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8">

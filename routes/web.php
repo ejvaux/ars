@@ -32,5 +32,6 @@ Route::resources([
 ]);
 
 Route::post ('/rrecord', 'ResultRecordsController@update');
+Route::post ('/urecord', 'RecordController@update');
 
 // 'updaterecord' => 'ResultRecordsController',

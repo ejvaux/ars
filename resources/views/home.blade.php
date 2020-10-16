@@ -30,9 +30,9 @@
                                 <li>
                                     <a class="nav-link" data-toggle="tab" href="#update-tab" role="tab">UPDATE</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a class="nav-link" data-toggle="tab" href="#records-tab" role="tab">RECORDS</a>
-                                </li> 
+                                </li>  --}}
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home-tab" role="tabpanel">
