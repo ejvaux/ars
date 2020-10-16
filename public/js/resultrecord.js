@@ -24,3 +24,8 @@ $("#resultRecSubmitBtn").on("click", function(e) {
     
 });
 
+$("form").keypress(function(e){
+    if(e.which==13){
+        return false;
+    }
+});
