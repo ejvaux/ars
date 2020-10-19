@@ -51,7 +51,7 @@ class TestRecordController extends Controller
         
         $request->save();
     
-        return 'success';
+        return 'Test Successfully Saved';
     }
 
     /**

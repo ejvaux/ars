@@ -21,9 +21,7 @@ $("#updateRecSubmitBtn").on("click", function(e) {
                 $("#updateRecForm")[0].reset()
                 alert(data)
             },
-            // error:function(error){
-            //     alert("Cant find the Employee ID");
-            // }
+            
         });
 
     }
