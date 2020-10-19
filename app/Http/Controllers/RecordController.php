@@ -72,7 +72,7 @@ class RecordController extends Controller
      */
     public function update(Request $request)
     {
-        $str = explode(",",$request->empl_id);
+        $str = explode(";",$request->empl_id);
         $id = $str[0];
 
         $test = $request->tests_id;

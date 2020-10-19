@@ -96,6 +96,7 @@ class ResultRecordsController extends Controller
         } catch (\Throwable $th) {
             return $th;
         }
+    }
         
             /* ->update([
                 'test_id' => $request->test_id ,
@@ -109,7 +110,7 @@ class ResultRecordsController extends Controller
             // return json_encode($records);
 
         
-    }
+    
 
     /**
      * Remove the specified resource from storage.
