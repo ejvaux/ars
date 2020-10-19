@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8">
-                    <button type="button" id="updateRecSubmitBtn" class="btn btn-info">Submit</button>
+                    <button type="button" id="updateRecSubmitBtn" class="btn btn-primary" >Submit</button>
                 </div>
                 <div class="col-md-4"></div>
             </div>

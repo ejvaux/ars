@@ -23,7 +23,13 @@
     @yield('js')
     
 </head>
-<body>
+<body style="background-color: white;">
+    {{-- style=" background: url('img/img2.jpg') no-repeat center center fixed;
+-webkit-background-size: cover; 
+-moz-background-size: cover;    
+-o-background-size: cover;      
+background-size: cover;  " --}}
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
