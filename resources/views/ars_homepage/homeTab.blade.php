@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8">
-                    <button type="button" id="testRecSubmitBtn" class="btn btn-info">Submit</button>
+                    <button type="button" id="testRecSubmitBtn" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-md-4"></div>
             </div>
@@ -73,7 +73,8 @@
 
 
 
-<h2 class="title2">RESULT RECORD</h2><br>
+<h2 class="title2">SCAN OUT</h2><br>
+{{-- <button class="btn btn-success">Create Test</button> --}}
 
 
 <div class="container" >
@@ -107,7 +108,7 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-8">
-                    <button type="button" id="resultRecSubmitBtn" class="btn btn-info">Submit</button>
+                    <button type="button" id="resultRecSubmitBtn" class="btn btn-primary" style="color:white;">Submit</button>
                 </div>
                 <div class="col-md-4"></div>
             </div>

@@ -14,8 +14,9 @@ $("#testRecSubmitBtn").on("click", function(e) {
             type:'post',
             data: formdata,
             success: function (data) {
-                $("#testRecordForm")[0].reset()
-                alert('success');
+                // $("#testRecordForm")[0].reset()
+                location.reload();
+                alert(data)
             }
             
         });

@@ -29,4 +29,7 @@ input{
 .title2{
     font-size: 32px;
 } 
+.btn-primary, .btn-success{
+    color:white;
+}
 
