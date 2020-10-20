@@ -73,7 +73,7 @@
 
 
 
-<h2 class="title2">RESULT RECORD</h2><br>
+<h2 class="title2">SCAN OUT</h2><br>
 {{-- <button class="btn btn-success">Create Test</button> --}}
 
 
