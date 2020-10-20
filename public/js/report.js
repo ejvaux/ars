@@ -3,11 +3,18 @@ $(function() {
         width: '100%'
     });
     $(document).ajaxStart(function(){
-        $('#loadTableData').html('Loading Please Wait . . .');
+        $('#loadTableData').html('Loading . . .');
     });
     $(document).ajaxComplete(function(){
         $('#loadTableData').html('Load');
     });
+
+    /* $(document).ajaxStart(function(){ 
+        $("#wait").css("display", "block"); 
+    }); 
+    $(document).ajaxComplete(function(){ 
+        $("#wait").css("display", "none"); 
+    }); */
 });
 
 /* ---------- AJAX SETUP ---------- */

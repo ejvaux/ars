@@ -113,11 +113,11 @@
                                                     {{-- <div class="col-md">
                                                         <a class="btn btn-secondary form-control" href="#">Export</a>
                                                     </div> --}}
-                                                    <div class="col-md">
-                                                        <a id="resetbtn" class="btn btn-outline-secondary form-control" href="#">Reset</a>
+                                                    <div class="col-md p-0">
+                                                        <a id="resetbtn" class="btn btn-outline-secondary form-control m-0" href="#">Reset</a>
                                                     </div>
-                                                    <div class="col-md">
-                                                        <a id="loadTableData" class="btn btn-outline-secondary form-control" href="#">Load</a>
+                                                    <div class="col-md p-0">
+                                                        <a id="loadTableData" class="btn btn-outline-secondary form-control m-0" href="#">Load</a>
                                                     </div>
                                                 </div>
                                             </div>
