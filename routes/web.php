@@ -34,4 +34,9 @@ Route::resources([
 Route::post ('/rrecord', 'ResultRecordsController@update');
 Route::post ('/urecord', 'RecordController@update');
 
+/* Reports START */
+Route::get ('/report', 'ReportsController@index');
+Route::post ('/report_load', 'ReportsController@filter_results');
+/* Reports END */
+
 // 'updaterecord' => 'ResultRecordsController',

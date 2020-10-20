@@ -7,9 +7,16 @@
 </div> -->
 
 <div class="footer-copyright text-center py-3 text-muted" style="margin-top:100px;">
-<span style='font-size:1.6rem'><!--  -->
-<i class="far fa-copyright"></i> 2020 Sercomm Phils., Inc.
-</span> 
-<br>Designed and built by:<br> 
-<span class="font-italic font-weight-bold" style='font-size: 1.5rem'>Rence Bondad & Ej Mati</span>
+    <span style='font-size:1.1rem'><!--  -->
+        <i class="far fa-copyright"></i> 2020 Sercomm Phils., Inc.
+    </span> 
+    <br>Designed and built by:<br> 
+    <span class="font-italic font-weight-bold" style='font-size: 1.1rem'>Rence Bondad &<br>Edmund O. Mati Jr.</span>
 </div>
+
+{{-- <div class="footer-copyright text-center py-3 text-muted">
+    <span style='font-size:1.1rem'>
+        <i class="far fa-copyright"></i> 2019 Prima Tech Phils., Inc.
+    </span> <br>Designed and built by:<br>
+    <span class="font-italic font-weight-bold" style='font-size: 1.1rem'>Edmund O. Mati Jr.</span> <br>
+</div> --}}
