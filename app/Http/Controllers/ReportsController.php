@@ -12,6 +12,7 @@ use App\Emp_type;
 use App\Departments;
 use App\Site;
 use App\Results;
+use App\Employees;
 
 class ReportsController extends Controller
 {
@@ -70,5 +71,26 @@ class ReportsController extends Controller
         /* $results = Result_records::all(); */
 
         return view('reports.tables.test_results_table',compact('results'));
+    }
+
+    public function check_employee(Request $request)
+    {
+        if(!$request->has('qr'))
+        {
+            return view('reports.check_employee');
+        }
+        else
+        {
+            $en = '';
+            if ( strpos($request->qr,';') ) {
+                $str = explode(";",$request->qr);
+                $en = $str[1];
+            } else {
+                $en = $request->qr;
+            } 
+            $emps = Employees::where('emp_num','LIKE','%'.$en.'%')->get();
+            return view('reports.tables.chk_emp_table',compact('emps'));
+        }
+        
     }
 }

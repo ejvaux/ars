@@ -9,6 +9,8 @@ use App\Site;
 
 class Employees extends Model
 {
+    protected $connection = 'sqlsrv2';
+
     protected $table = 'employees';
 
     public function type()

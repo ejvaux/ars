@@ -54,7 +54,9 @@ $.ajaxSetup({
                 close: false, 
             }); 
             // something weird is happening 
-        } 
+        }
+        $('#msg').removeClass('text-success text-info').addClass('text-danger');
+        $('#msg').attr('value','An error occurred!');
     },
     headers: { 
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') 
@@ -95,3 +97,31 @@ $('#resetbtn').on('click', function(e){
         width: '100%'
     });
 });
+
+/* Check Employee */
+$('#qr').on('keydown', function(e){
+    if (e.which == 13) {
+        /* iziToast.success({
+            title: 'OK',
+            message: 'Successfully inserted record!',
+            position: 'topCenter', 
+            close: false,
+        }); */
+        $('#msg').removeClass('text-success text-danger').addClass('text-info');
+        $('#msg').attr('value','Processing Please Wait . . .');
+        $.ajax({ 
+            url: 'ce', 
+            type:'get', 
+            data: {
+                qr : $('#qr').val()
+            }, 
+            success: function (data) {
+                $('#msg').removeClass('text-info').addClass('text-success');
+                $('#msg').attr('value','DONE');
+                $('#empTableDiv').html(data);
+            }
+        });
+    }
+    
+});
+/* Check Employee */

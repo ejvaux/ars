@@ -39,4 +39,6 @@ Route::get ('/report', 'ReportsController@index');
 Route::post ('/report_load', 'ReportsController@filter_results');
 /* Reports END */
 
+Route::get ('/ce', 'ReportsController@check_employee');
+
 // 'updaterecord' => 'ResultRecordsController',
